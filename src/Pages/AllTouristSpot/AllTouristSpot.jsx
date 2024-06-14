@@ -60,7 +60,7 @@
 
 
 import { useEffect, useState } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation,  } from "react-router-dom";
 
 const AllTouristSpot = () => {
     const location = useLocation();
@@ -78,7 +78,7 @@ const AllTouristSpot = () => {
         try {
             const [touristSpotRes, countryRes, userSpotRes] = await Promise.all([
                 fetch(`http://localhost:5000/spot?sort=${sortOrder}`),
-                fetch(`http://localhost:5000/country`),
+                fetch('/spotData.json'),
                 fetch(`http://localhost:5000/userspot`)
             ]);
 
@@ -123,29 +123,18 @@ const AllTouristSpot = () => {
                         <p>Total Visitors Per Year: {spot.totalVisitorsPerYear}</p>
                         <p>Travel Time: {spot.travel_time}</p>
                         <p>Best Season: {spot.seasonality}</p>
-                        <Link to={`/details/${spot._id}`}>
-                            <button className="mt-4 px-4 py-2 bg-blue-900 text-white rounded">View Details</button>
-                        </Link>
+                        
                     </div>
                 ))}
             </div>
             <div className="container mx-auto mt-10">
-                <h2 className="text-2xl lg:text-4xl font-bold my-4 lg:my-7 text-center">Countries</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {countries.map(country => (
-                        <div key={country._id} className="border rounded p-4">
-                            <h2 className="text-xl font-bold mb-2">{country.name}</h2>
-                            <p>Region: {country.region}</p>
-                            <p>Population: {country.population}</p>
-                            <Link to={`/country/${country._id}`}>
-                                <button className="mt-4 px-4 py-2 bg-blue-900 text-white rounded">View Details</button>
-                            </Link>
-                        </div>
-                    ))}
-                </div>
+                
+                
+                    
             </div>
+           
             <div className="container mx-auto mt-10">
-                <h2 className="text-2xl lg:text-4xl font-bold my-4 lg:my-7 text-center">User Spots</h2>
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {userSpots.map(spot => (
                         <div key={spot._id} className="border rounded p-4">
@@ -155,15 +144,15 @@ const AllTouristSpot = () => {
                             <p>Total Visitors Per Year: {spot.totalvisitors}</p>
                             <p>Travel Time: {spot.traveltime}</p>
                             <p>Best Season: {spot.seasonality}</p>
-                            <Link to={`/userspot/${spot._id}`}>
-                                <button className="mt-4 px-4 py-2 bg-blue-900 text-white rounded">View Details</button>
-                            </Link>
+                           
                         </div>
                     ))}
                 </div>
-            </div>
-        </>
+        </div>
+    </>
     );
 };
 
 export default AllTouristSpot;
+
+
