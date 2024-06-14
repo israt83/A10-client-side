@@ -153,12 +153,8 @@ const router = createBrowserRouter([
       {
         path: "allTouristSpot",
         element: <AllTouristSpot />,
-        // loader: () => fetch(spotUrl).then(response => response.json())
-        loader: async () => {
-          const response = await fetch('/spotData.json');
-          const data = await response.json();
-          return data;
-      }
+        loader: () => fetch(spotUrl).then(response => response.json())
+       
       },
       {
         path: "addtouristspot",
