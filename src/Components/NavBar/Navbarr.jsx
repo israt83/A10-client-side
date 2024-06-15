@@ -75,14 +75,9 @@ const Navbarr = () => {
 
                 <div className="navbar-end">
                     <div>
-                        {/* {
-                            user? <Link to='/register'>
-                            <button type="" className="px-5 py-3 mr-4 font-semibold rounded hidden btn btn-outline border-blue-900 ">REGISTER</button>
-                        </Link>:<Link to='/register'>
-                            <button type="" className="px-5 py-3 mr-4 font-semibold rounded btn btn-outline border-blue-900 ">REGISTER</button>
-                        </Link>
-                        } */}
+                      
                           {user ? (
+                            
         <Tooltip title="Click me" position="top" trigger="mouseenter" animation="fade" arrow={true}>
           <Link to="/register">
             <button type="" className="px-5 py-3 mr-4 font-semibold rounded hidden btn btn-outline border-blue-900">
@@ -90,6 +85,7 @@ const Navbarr = () => {
             </button>
           </Link>
         </Tooltip>
+       
       ) : (
         <Tooltip title="Click me" position="top" trigger="mouseenter" animation="fade" arrow={true}>
           <Link to="/register">

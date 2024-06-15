@@ -29,10 +29,7 @@ const MyList = ({ userSpot, userSpots, setUserSpots }) => {
          
             fetch(`http://localhost:5000/userspot/${_id}`,{
             method:'DELETE',
-            // headers:{
-            //     'content-type' :'application/json'
-            // },
-            // body:JSON.stringify()
+           
            })
            .then(res => res.json())
            .then(data=>{
@@ -69,11 +66,7 @@ const MyList = ({ userSpot, userSpots, setUserSpots }) => {
       </Tooltip>
   
           
-              {/* <Link to={`/updatelist/${_id}`}>
-                            <button className="btn btn-edit">
-                                <FaRegEdit />
-                            </button>
-                </Link> */}
+           
            
       <Link to={`/updatelist/${_id}`}>
         <Tooltip title="Edit" position="top" trigger="mouseenter" animation="fade" arrow={true}>
@@ -87,7 +80,7 @@ const MyList = ({ userSpot, userSpots, setUserSpots }) => {
         </div>
         {
                         description.length > 50 ?
-                            <p className="dark:text-gray-800 ">{description.slice(0, 100)} ...<br /><button className='btn btn-outline text-blue-900 w-full mt-3'><span className="text-blue-900"></span></button></p> :
+                            <p className="dark:text-gray-800 ">{description.slice(0, 100)} ...<br /> <span className="text-blue-900"></span></p> :
                             <p className="dark:text-gray-800">{description}</p>
                 }
 	</div>
