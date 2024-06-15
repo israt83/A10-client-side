@@ -2,6 +2,10 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaRegEdit } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+// import ReactTooltip from 'react-tooltip';
+import { Tooltip } from 'react-tippy';
+import 'react-tippy/dist/tippy.css';
+
 
 
 
@@ -56,16 +60,29 @@ const MyList = ({ userSpot, userSpots, setUserSpots }) => {
 		<div className="flex items-center justify-between">
 			<p>{countryName}</p>
             <div className="space-x-4">
-            <button onClick={() =>handleDelete(_id)} ><RiDeleteBin6Line /></button>
-            {/* <Link to={`updateSpot/${_id}`}>
-            <button><FaRegEdit /></button>
-            </Link> */}
-              <Link to={`/updatelist/${_id}`}>
+            {/* <button onClick={() =>handleDelete(_id)} ><RiDeleteBin6Line /></button> */}
+           
+      <Tooltip title="Delete" position="top" trigger="mouseenter" animation="fade" arrow={true}>
+        <button onClick={() => handleDelete(_id)}>
+          <RiDeleteBin6Line />
+        </button>
+      </Tooltip>
+  
+          
+              {/* <Link to={`/updatelist/${_id}`}>
                             <button className="btn btn-edit">
                                 <FaRegEdit />
                             </button>
-                </Link>
-            
+                </Link> */}
+           
+      <Link to={`/updatelist/${_id}`}>
+        <Tooltip title="Edit" position="top" trigger="mouseenter" animation="fade" arrow={true}>
+          <button className="btn btn-edit">
+            <FaRegEdit />
+          </button>
+        </Tooltip>
+      </Link>
+  
             </div>
         </div>
         {
