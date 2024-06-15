@@ -7,10 +7,12 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { Fade } from 'react-awesome-reveal';
 
 const Banner = () => {
     return (
-        <div className="swiper-container pt-36" data-aos="fade-up" data-aos-duration="3000" style={{ margin: '0 50px', zIndex: 10 }}>
+       <Fade direction="" delay={100}>
+         <div className="swiper-container pt-36"  style={{ margin: '0 50px', zIndex: 10 }}>
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
@@ -28,7 +30,9 @@ const Banner = () => {
                         borderRadius: '20px',
                         zIndex: 10
                     }} className="mx-auto lg:h-[600px]">
-                        <h2 className='text-xl lg:text-6xl font-bold text-left py-48 pl-40 text-blue-950'>Get Out,<br /><span>Get Active and</span><br />Explore....</h2>
+                       <Fade direction="down" delay={10}>
+                       <h2 className='text-xl lg:text-6xl font-bold text-left py-48 pl-40 text-blue-950'>Get Out,<br /><span>Get Active and</span><br />Explore....</h2>
+                       </Fade>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -57,6 +61,7 @@ const Banner = () => {
                 </SwiperSlide>
             </Swiper>
         </div>
+       </Fade>
     );
 };
 

@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-
+import { Tooltip } from 'react-tippy';
+import 'react-tippy/dist/tippy.css';
 const Navbarr = () => {
     // update state on toggle
     const [theme, setTheme] = useState('light')
@@ -74,13 +75,30 @@ const Navbarr = () => {
 
                 <div className="navbar-end">
                     <div>
-                        {
+                        {/* {
                             user? <Link to='/register'>
                             <button type="" className="px-5 py-3 mr-4 font-semibold rounded hidden btn btn-outline border-blue-900 ">REGISTER</button>
                         </Link>:<Link to='/register'>
                             <button type="" className="px-5 py-3 mr-4 font-semibold rounded btn btn-outline border-blue-900 ">REGISTER</button>
                         </Link>
-                        }
+                        } */}
+                          {user ? (
+        <Tooltip title="Click me" position="top" trigger="mouseenter" animation="fade" arrow={true}>
+          <Link to="/register">
+            <button type="" className="px-5 py-3 mr-4 font-semibold rounded hidden btn btn-outline border-blue-900">
+              REGISTER
+            </button>
+          </Link>
+        </Tooltip>
+      ) : (
+        <Tooltip title="Click me" position="top" trigger="mouseenter" animation="fade" arrow={true}>
+          <Link to="/register">
+            <button type="" className="px-5 py-3 mr-4 font-semibold rounded btn btn-outline border-blue-900">
+              REGISTER
+            </button>
+          </Link>
+        </Tooltip>
+      )}
                     </div>
                 
                     {user ? (
@@ -105,9 +123,11 @@ const Navbarr = () => {
                             </ul>
                         </div>
                     ) : (
+                        <Tooltip title="Click me" position="top" trigger="mouseenter" animation="fade" arrow={true}>
                         <Link to='/login'>
                             <button type="" className="px-5 py-3 font-semibold rounded btn btn-outline border-blue-900 ">LOG IN</button>
                         </Link>
+                        </Tooltip>
                     )}
                     <label className='cursor-pointer grid place-items-center'>
           <input
