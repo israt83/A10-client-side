@@ -150,6 +150,7 @@ import 'animate.css/animate.min.css';
 import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Countrys from "../Countrys/Countrys";
+import FAQ from "../FAQ/FAQ";
 
 const Home = () => {
   useEffect(() => {
@@ -196,7 +197,7 @@ const Home = () => {
   ))}
 </div>
 
-
+<FAQ></FAQ>
 
     
     </>
