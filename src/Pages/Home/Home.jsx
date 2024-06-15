@@ -151,6 +151,7 @@ import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Countrys from "../Countrys/Countrys";
 import FAQ from "../FAQ/FAQ";
+import { Bounce, Slide, Zoom } from "react-awesome-reveal";
 
 const Home = () => {
   useEffect(() => {
@@ -178,15 +179,17 @@ const Home = () => {
           Dive into our list of the best tourist spots and let your wanderlust lead the way!
         </p>
       </div>
+      
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-2 space-y-5 mt-10">
         {tourismSpots.map(tourismSpot => (
           <Card key={tourismSpot._id} tourismSpot={tourismSpot} />
         ))}
       </div>
+    
       <h2 className="text-2xl font-bold text-left lg:ml-56 text-blue-950 uppercase mt-20">
         Featured Tourist Spot Countries
       </h2>
-      
+        
 <div className="container mx-auto flex flex-wrap justify-center w-[900px]">
   {countries.slice(0, 6).map(country => (
     <div className="w-full sm:w-1/2 lg:w-1/3 p-2" key={country._id}>
