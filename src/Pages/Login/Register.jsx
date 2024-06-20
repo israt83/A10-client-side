@@ -52,101 +52,104 @@ const Register = () => {
   };
 
   return (
+
     <>
-      <ToastContainer />
-      <div className="bg-base-200 my-5 mt-40"  data-aos="zoom-in">
-        <h1 className="text-5xl font-bold text-center py-5">Register now!</h1>
-        <div className="hero min-h-screen">
-          <div className="hero-content flex-col lg:flex-row-reverse">
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className="card flex-shrink-0 w-full lg:w-[500px] shadow-2xl bg-base-100"
-            >
-              <div className="card-body">
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Full Name</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Full name"
-                    className="input input-bordered"
-                    {...register("fullName", { required: true })}
-                  />
-                  {errors.fullName && (
-                    <span className="text-red-500">This field is required</span>
-                  )}
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Email</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Email"
-                    className="input input-bordered"
-                    {...register("email", { required: true })}
-                  />
-                  {errors.email && (
-                    <span className="text-red-500">This field is required</span>
-                  )}
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Image Url</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Image url"
-                    className="input input-bordered"
-                    {...register("image")}
-                  />
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Password</span>
-                  </label>
+    <ToastContainer />
+    <div className="bg-base-200 my-5 mt-40 w-full" data-aos="zoom-in">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center py-5">Register now!</h1>
+      <div className="min-h-screen flex justify-center items-center">
+        <div className="w-full lg:w-1/2 px-4">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="card flex-shrink-0 w-full shadow-2xl bg-base-100"
+          >
+            <div className="card-body w-full">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Full Name</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Full name"
+                  className="input input-bordered"
+                  {...register("fullName", { required: true })}
+                />
+                {errors.fullName && (
+                  <span className="text-red-500">This field is required</span>
+                )}
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Email</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Email"
+                  className="input input-bordered"
+                  {...register("email", { required: true })}
+                />
+                {errors.email && (
+                  <span className="text-red-500">This field is required</span>
+                )}
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Image Url</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Image url"
+                  className="input input-bordered"
+                  {...register("image")}
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Password</span>
+                </label>
+                <div className="relative">
                   <input
                     type={showPassword ? "text" : "password"}
                     placeholder="Password"
-                    className="input input-bordered pr-10"
+                    className="input input-bordered w-full pr-10"
                     {...register("password", { required: true })}
                   />
                   <button
                     type="button"
-                    className="ml-96 -mt-8 text-gray-500 focus:outline-none"
+                    className="absolute right-0 top-0 mt-3 mr-3 text-gray-500 focus:outline-none"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? <IoEyeOutline className="h-6 w-6" /> : <GoEyeClosed className="h-6 w-6" />}
                   </button>
-                  {errors.password && (
-                    <span className="text-red-500">This field is required</span>
-                  )}
                 </div>
-                <div className="form-control mt-6 p-0">
-                  <button className="btn btn-neutral">Register</button>
-                </div>
-                <label className="label">
-                  Already have an account?{" "}
-                  <Link to="/login" className="label-text-alt link link-hover">
-                    Login here
-                  </Link>
-                </label>
-                <SocialLogin />
+                {errors.password && (
+                  <span className="text-red-500">This field is required</span>
+                )}
               </div>
-            </form>
-          </div>
+              <div className="form-control mt-6">
+                <button className="btn btn-neutral">Register</button>
+              </div>
+              <label className="label">
+                Already have an account?{" "}
+                <Link to="/login" className="label-text-alt link link-hover">
+                  Login here
+                </Link>
+              </label>
+              <SocialLogin />
+            </div>
+          </form>
         </div>
       </div>
-      {toastMessage && (
-        <div className="toast toast-success">
-          <button className="btn btn-ghost btn-sm" onClick={() => setToastMessage("")}>
-            Close
-          </button>
-          <span>{toastMessage}</span>
-        </div>
-      )}
-    </>
+    </div>
+    {toastMessage && (
+      <div className="toast toast-success">
+        <button className="btn btn-ghost btn-sm" onClick={() => setToastMessage("")}>
+          Close
+        </button>
+        <span>{toastMessage}</span>
+      </div>
+    )}
+  </>
   );
 };
 
