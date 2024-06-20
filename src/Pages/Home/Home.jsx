@@ -42,7 +42,7 @@ const Home = () => {
         ))}
       </div>
     
-      <h2 className="text-2xl font-bold text-left lg:ml-56 text-blue-950 uppercase mt-20">
+      <h2 className="text-2xl font-bold text-center lg:text-left lg:ml-56 text-blue-950 uppercase mt-20">
         Featured Tourist Spot Countries
       </h2>
         

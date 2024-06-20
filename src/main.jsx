@@ -146,10 +146,13 @@ const router = createBrowserRouter([
         path: "details/:id",
         element: <PrivateRoute><Details /></PrivateRoute>,
         loader: async ({ params }) => {
+          
           const response = await fetch(`${spotUrl}/${params.id}`);
           return response.json();
         }
       },
+    
+      
       {
         path: "allTouristSpot",
         element: <AllTouristSpot />,

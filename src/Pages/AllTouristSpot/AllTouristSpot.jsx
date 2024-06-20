@@ -266,7 +266,7 @@ const AllTouristSpot = () => {
   return (
     <>
       <div
-        className="mt-32 border border-blue-900 text-center mx-auto w-full max-w-screen-lg h-auto lg:h-[300px] flex flex-col justify-center items-center my-10 p-4 lg:p-0"
+        className="mt-20 text-center mx-auto w-full max-w-screen-lg h-auto lg:h-[300px] flex flex-col justify-center items-center my-10 p-4 lg:p-0"
         data-aos="zoom-in"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="1000"
@@ -274,10 +274,7 @@ const AllTouristSpot = () => {
         <h1 className="text-2xl lg:text-4xl font-bold my-4 lg:my-7">
           All Tourist Spots
         </h1>
-        <p className="border border-dashed w-full lg:w-[500px] p-4 text-center text-[#706F6F] text-sm lg:text-base font-semibold">
-          Discover the latest tourist spots added by users. Explore, plan your
-          trip, and enjoy the best destinations around the world.
-        </p>
+    
         <select
           onChange={handleSortChange}
           className="mt-4 p-2 border border-blue-900 rounded"

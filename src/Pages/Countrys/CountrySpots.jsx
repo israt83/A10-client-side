@@ -82,7 +82,7 @@ const CountrySpots = () => {
 
     return (
         <section className="py-6 dark:bg-gray-100 dark:text-gray-900 mt-40">
-            <div className='grid grid-cols-2 lg:ml-9'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 lg:ml-9'>
                 <div>
                     <img className='w-4/5 h-96 rounded-xl' src={country.img} alt={country.countryName} />
                 </div>

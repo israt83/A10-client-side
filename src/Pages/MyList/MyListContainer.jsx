@@ -9,8 +9,8 @@ function MyListContainer() {
   const [userSpots, setUserSpots] = useState(loadedUserSpots);
 
   return (
-    <div className='m-28'>
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-48'>
+    <div className='mt-28 w-full'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-48'>
         {userSpots.map(userSpot => (
           <MyList
             key={userSpot._id}

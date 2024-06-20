@@ -101,7 +101,7 @@ const Banner = () => {
                             borderRadius: '20px',
                             zIndex: 10
                         }} className="mx-auto lg:h-[600px]">
-                            <h2 className='text-xl lg:text-6xl font-bold text-left py-48 pl-40 text-blue-950'>
+                            <h2 className='text-xl lg:text-6xl font-bold text-center lg:text-left py-48 lg:pl-40 text-blue-950'>
                                 <Typewriter
                                     words={['Get Out,', 'Get Active and', 'Explore....']}
                                     loop={false}
@@ -123,7 +123,7 @@ const Banner = () => {
                             borderRadius: '20px',
                             zIndex: 10
                         }} className="h-[600px]">
-                            <h2 className='text-6xl font-bold text-left py-48 pl-40 text-blue-950'>
+                            <h2 className='text-xl lg:text-6xl font-bold text-center lg:text-left py-48 lg:pl-40 text-blue-950'>
                                 <Typewriter
                                     words={['Get Out,', 'Get Active and', 'Explore....']}
                                     loop={false}
@@ -145,7 +145,7 @@ const Banner = () => {
                             borderRadius: '20px',
                             zIndex: 10
                         }} className="h-[600px]">
-                            <h2 className='text-6xl font-bold text-left py-48 pl-40 text-blue-950'>
+                            <h2 className='text-xl lg:text-6xl font-bold text-center lg:text-left py-48 lg:pl-40 text-blue-950'>
                                 <Typewriter
                                     words={['Get Out,', 'Get Active and', 'Explore....']}
                                     loop={false}
