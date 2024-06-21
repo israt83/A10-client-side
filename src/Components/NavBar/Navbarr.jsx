@@ -80,7 +80,7 @@ const Navbarr = () => {
                             
         <Tooltip title="Click me" position="top" trigger="mouseenter" animation="fade" arrow={true}>
           <Link to="/register">
-            <button type="" className="px-5 py-3 mr-4 font-semibold rounded hidden btn btn-outline border-blue-900">
+            <button type="" className="lg:px-5 lg:py-3 mr-4 font-semibold rounded hidden btn btn-outline border-blue-900">
               REGISTER
             </button>
           </Link>
@@ -89,7 +89,7 @@ const Navbarr = () => {
       ) : (
         <Tooltip title="Click me" position="top" trigger="mouseenter" animation="fade" arrow={true}>
           <Link to="/register">
-            <button type="" className="px-5 py-3 mr-4 font-semibold rounded btn btn-outline border-blue-900">
+            <button type="" className="lg:px-5 lg:py-3 lg:mr-4 font-normal lg:font-semibold rounded lg:btn lg:btn-outline lg:border-blue-900">
               REGISTER
             </button>
           </Link>
@@ -121,7 +121,7 @@ const Navbarr = () => {
                     ) : (
                         <Tooltip title="Click me" position="top" trigger="mouseenter" animation="fade" arrow={true}>
                         <Link to='/login'>
-                            <button type="" className="px-5 py-3 font-semibold rounded btn btn-outline border-blue-900 ">LOG IN</button>
+                            <button type="" className="lg:uppercase lg:px-5 lg:py-3 font-normal lg:font-semibold rounded lg:btn lg:btn-outline lg:border-blue-900 ">LOG IN</button>
                         </Link>
                         </Tooltip>
                     )}

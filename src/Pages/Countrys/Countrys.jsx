@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Countrys = ({ country }) => {
     return (
         <Link to={`/country/${country._id}`}>
-            <div className="justify-center p-6 rounded-xl sm:px-12 dark:text-gray-800">
+            <div className="justify-center p-6 rounded-xl sm:px-12 dark:text-gray-800 hover:animate-pulse relative">
                 <div className="card card-compact w-72">
                     <figure>
                         <img className="w-72 h-52" src={country.image} alt={country.countryName} />
