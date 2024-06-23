@@ -27,7 +27,7 @@ const MyList = ({ userSpot, userSpots, setUserSpots }) => {
           }).then((result) => {
             if (result.isConfirmed) {
          
-            fetch(`http://localhost:5000/userspot/${_id}`,{
+            fetch(`https://tourism-store-server.vercel.app/userspot/${_id}`,{
             method:'DELETE',
            
            })

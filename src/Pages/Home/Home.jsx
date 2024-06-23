@@ -7,7 +7,6 @@ import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Countrys from "../Countrys/Countrys";
 import FAQ from "../FAQ/FAQ";
-// import { Bounce, Slide, Zoom } from "react-awesome-reveal";
 
 const Home = () => {
   useEffect(() => {
@@ -18,7 +17,7 @@ const Home = () => {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/country')
+    fetch('https://tourism-store-server.vercel.app/country')
       .then(res => res.json())
       .then(data => setCountries(data));
   }, []);

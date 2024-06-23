@@ -57,28 +57,3 @@ const Details = () => {
 };
 
 export default Details;
-
-// import React from 'react';
-// import { useLoaderData } from 'react-router-dom';
-
-// const Details = () => {
-//   const { spot, error } = useLoaderData();
-
-//   if (error) {
-//     return <div>Error: {error}</div>;
-//   }
-
-//   if (!spot) {
-//     return <div>No data found</div>;
-//   }
-
-//   return (
-//     <div>
-//       <h1>{spot.name}</h1>
-//       <p>{spot.description}</p>
-//       {/* Render other spot details here */}
-//     </div>
-//   );
-// };
-
-// export default Details;
