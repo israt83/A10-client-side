@@ -68,7 +68,7 @@ const CountrySpots = () => {
     const [country, setCountry] = useState(null);
 
     useEffect(() => {
-        fetch('/spotData.json')
+        fetch('http://localhost:5000/countryspot')
             .then(res => res.json())
             .then(data => {
                 const selectedCountry = data.countries.find(country => country._id === id);

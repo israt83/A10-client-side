@@ -2,7 +2,7 @@
 
 import React from 'react';
 // import { FaLocationDot, FaDollarSign } from "react-icons/fa";
-import { MdAccessTime } from "react-icons/md";
+// import { MdAccessTime } from "react-icons/md";
 import { useLoaderData } from 'react-router-dom';
 
 const CountrySpotCardDetails = () => {

@@ -84,7 +84,7 @@ const router = createBrowserRouter([
       },
       {
         path: "mylist",
-        element: <PrivateRoute><MyListContainer /></PrivateRoute>, // Correct usage
+        element: <PrivateRoute><MyListContainer /></PrivateRoute>, 
         loader: () => fetch(userspotUrl).then(response => response.json())
       },
       {
@@ -107,7 +107,7 @@ const router = createBrowserRouter([
         path: "country/:id",
         element: <CountrySpot />,
         loader: async () => {
-            const response = await fetch('/spotData.json');
+            const response = await fetch('http://localhost:5000/countryspot');
             const data = await response.json();
             return data;
         }
@@ -117,7 +117,7 @@ const router = createBrowserRouter([
       path: "detail/:id",
       element: <CountrySpotCardDetails />,
       loader: async ({ params }) => {
-      const response = await fetch('/spotData.json'); // Assuming spotData.json is accessible via the public directory or server route
+      const response = await fetch('http://localhost:5000/countryspot'); // Assuming spotData.json is accessible via the public directory or server route
       if (!response.ok) {
       throw new Error('Failed to fetch data');
       }
