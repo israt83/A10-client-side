@@ -17,7 +17,7 @@ const Home = () => {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    fetch('https://tourism-store-server.vercel.app/country')
+    fetch('http://localhost:5000/country')
       .then(res => res.json())
       .then(data => setCountries(data));
   }, []);

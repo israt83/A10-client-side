@@ -27,7 +27,7 @@ const MyList = ({ userSpot, userSpots, setUserSpots }) => {
           }).then((result) => {
             if (result.isConfirmed) {
          
-            fetch(`https://tourism-store-server.vercel.app/userspot/${_id}`,{
+            fetch(`http://localhost:5000/userspot/${_id}`,{
             method:'DELETE',
            
            })
@@ -50,7 +50,7 @@ const MyList = ({ userSpot, userSpots, setUserSpots }) => {
     }
   
     return (
-    <div className="rounded-md shadow-md  dark:bg-gray-50 dark:text-gray-800">
+    <div className=" rounded-md shadow-md  dark:bg-gray-50 dark:text-gray-800">
 
 	<img src={image} alt="" className="object-cover object-center w-full h-72 dark:bg-gray-500 rounded-xl" />
 	<div className="p-3">

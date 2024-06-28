@@ -26,9 +26,12 @@ import UpdateList from "./Pages/MyList/UpdateList";
 import CountrySpot from "./Pages/Countrys/CountrySpot";
 import CountrySpotCardDetails from "./Pages/Countrys/CountrySpotCardDetails";
 // const url = "/spotData.json";
-const spotUrl = "https://tourism-store-server.vercel.app/spot";
-const countryUrl = "https://tourism-store-server.vercel.app/country";
-const userspotUrl ='https://tourism-store-server.vercel.app/userspot';
+const spotUrl = "http://localhost:5000/spot";
+const countryUrl = "http://localhost:5000/country";
+const userspotUrl ='http://localhost:5000/userspot';
+
+
+
 
 const router = createBrowserRouter([
   {
@@ -41,6 +44,8 @@ const router = createBrowserRouter([
         element: <Home />,
         loader: () => fetch(spotUrl).then(response => response.json())
       },
+
+    
       {
         path: "details/:id",
         element: <PrivateRoute><Details /></PrivateRoute>,
@@ -51,7 +56,35 @@ const router = createBrowserRouter([
         }
       },
     
+      // {
+      //   path: "detail/:id",
+      //   element: <PrivateRoute><Details /></PrivateRoute>,
+      //   loader: async ({ params }) => {
+      //     try {
+      //       const response = await fetch(`${spotUrl}/${params.id}`);
+            
+      //       // Check if the response is ok (status in the range 200-299)
+      //       if (!response.ok) {
+      //         throw new Error(`Error fetching data: ${response.statusText}`);
+      //       }
+            
+      //       const data = await response.json();
+      //       return data;
+      //     } catch (error) {
+      //       console.error("Failed to load data:", error);
+      //       // Optionally, you can return a fallback value or handle the error differently
+      //       return { error: error.message };
+      //     }
+      //   }
+      // },
+
+  
+     
       
+  
+    
+
+    
       {
         path: "allTouristSpot",
         element: <AllTouristSpot />,
@@ -99,7 +132,7 @@ const router = createBrowserRouter([
       {
         path:'updatelist/:id',
         element:<UpdateList></UpdateList>,
-        loader:({params}) =>fetch(`https://tourism-store-server.vercel.app/userspot/${params.id}`)
+        loader:({params}) =>fetch(`http://localhost:5000/userspot/${params.id}`)
         
     
       },
@@ -107,7 +140,7 @@ const router = createBrowserRouter([
         path: "country/:id",
         element: <CountrySpot />,
         loader: async () => {
-            const response = await fetch('https://tourism-store-server.vercel.app/countryspot');
+            const response = await fetch('http://localhost:5000/countryspot');
             const data = await response.json();
             return data;
         }
@@ -117,7 +150,7 @@ const router = createBrowserRouter([
       path: "detail/:id",
       element: <CountrySpotCardDetails />,
       loader: async ({ params }) => {
-      const response = await fetch('https://tourism-store-server.vercel.app/countryspot'); 
+      const response = await fetch('http://localhost:5000/countryspot'); 
       if (!response.ok) {
       throw new Error('Failed to fetch data');
       }
