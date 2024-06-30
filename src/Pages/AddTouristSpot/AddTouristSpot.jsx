@@ -28,7 +28,7 @@ const AddTouristSpot = () => {
 
 
     //    send data to the server
-    fetch('http://localhost:5000/userspot',{
+    fetch('https://tourismweb-stores-server-g5nj.vercel.app/userspot',{
         method:'POST',
         headers:{
             'content-type' :'application/json'

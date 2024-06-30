@@ -21,9 +21,9 @@ const AllTouristSpot = () => {
     setLoading(true);
     try {
       const [touristSpotRes, userSpotRes, touristCountrySpotRes] = await Promise.all([
-        fetch(`http://localhost:5000/spot?sort=${sortOrder}`),
-        fetch(`http://localhost:5000/userspot`),
-        fetch(`http://localhost:5000/countryspot?sort=${sortOrder}`),
+        fetch(`https://tourismweb-stores-server-g5nj.vercel.app/spot?sort=${sortOrder}`),
+        fetch(`https://tourismweb-stores-server-g5nj.vercel.app/userspot`),
+        fetch(`https://tourismweb-stores-server-g5nj.vercel.app/countryspot?sort=${sortOrder}`),
       ]);
 
       const [touristSpotData, userSpotData, touristCountrySpotData] = await Promise.all([
