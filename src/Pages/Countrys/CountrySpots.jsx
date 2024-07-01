@@ -9,7 +9,7 @@ const CountrySpots = () => {
     const [country, setCountry] = useState(null);
 
     useEffect(() => {
-        fetch('https://tourismweb-stores-server-g5nj.vercel.app/countryspot')
+        fetch('https://tourismweb-stores-server.onrender.com/countryspot')
             .then(res => res.json())
             .then(data => {
                 const selectedCountry = data.countries.find(country => country._id === id);

@@ -28,7 +28,7 @@ const AddCountry = () => {
 
 
     //    send data to the server
-    fetch('https://tourismweb-stores-server-g5nj.vercel.app/country',{
+    fetch('https://tourismweb-stores-server.onrender.com/country',{
         method:'POST',
         headers:{
             'content-type' :'application/json'

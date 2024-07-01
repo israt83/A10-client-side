@@ -27,7 +27,7 @@ const MyList = ({ userSpot, userSpots, setUserSpots }) => {
           }).then((result) => {
             if (result.isConfirmed) {
          
-            fetch(`https://tourismweb-stores-server-g5nj.vercel.app/userspot/${_id}`,{
+            fetch(`https://tourismweb-stores-server.onrender.com/userspot/${_id}`,{
             method:'DELETE',
            
            })

@@ -26,15 +26,30 @@ import UpdateList from "./Pages/MyList/UpdateList";
 import CountrySpot from "./Pages/Countrys/CountrySpot";
 import CountrySpotCardDetails from "./Pages/Countrys/CountrySpotCardDetails";
 // const url = "/spotData.json";
-const spotUrl = "https://tourismweb-stores-server-g5nj.vercel.app/spot";
-const countryUrl = "https://tourismweb-stores-server-g5nj.vercel.app/country";
-const userspotUrl ='https://tourismweb-stores-server-g5nj.vercel.app/userspot';
+const spotUrl = "https://tourismweb-stores-server.onrender.com/spot";
+const countryUrl = "https://tourismweb-stores-server.onrender.com/country";
+const userspotUrl ='https://tourismweb-stores-server.onrender.com/userspot';
 
 
 
 
 
 const router = createBrowserRouter([
+  // {
+  //   path: "/",
+  //   element: <Root />,
+  //   errorElement: <NotFound />,
+  //   children: [
+  //     {
+  //       path: "/",
+  //       element: <Home />,
+  //       // loader: () => fetch(spotUrl).then(response => response.json())
+  //       loader: async () => {
+  //         const response = await fetch(spotUrl);
+  //         const data = await response.json();
+  //         return data;
+  //     }
+  //     },
   {
     path: "/",
     element: <Root />,
@@ -43,7 +58,19 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch(spotUrl).then(response => response.json())
+        loader: async () => {
+          try {
+            const response = await fetch(spotUrl);
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            return data;
+          } catch (error) {
+            console.error('Fetching error:', error);
+            throw error; // This will allow the errorElement to be shown
+          }
+        }
       },
 
     
@@ -133,7 +160,7 @@ const router = createBrowserRouter([
       {
         path:'updatelist/:id',
         element:<UpdateList></UpdateList>,
-        loader:({params}) =>fetch(`https://tourismweb-stores-server-g5nj.vercel.app/userspot/${params.id}`)
+        loader:({params}) =>fetch(`https://tourismweb-stores-server.onrender.com/userspot/${params.id}`)
         
     
       },
@@ -141,7 +168,7 @@ const router = createBrowserRouter([
         path: "country/:id",
         element: <CountrySpot />,
         loader: async () => {
-            const response = await fetch('https://tourismweb-stores-server-g5nj.vercel.app/countryspot');
+            const response = await fetch('https://tourismweb-stores-server.onrender.com/countryspot');
             const data = await response.json();
             return data;
         }
@@ -151,7 +178,7 @@ const router = createBrowserRouter([
       path: "detail/:id",
       element: <CountrySpotCardDetails />,
       loader: async ({ params }) => {
-      const response = await fetch('https://tourismweb-stores-server-g5nj.vercel.app/countryspot'); 
+      const response = await fetch('https://tourismweb-stores-server.onrender.com/countryspot'); 
       if (!response.ok) {
       throw new Error('Failed to fetch data');
       }
