@@ -1,11 +1,4 @@
 
-
-## NPM Packages Used
-
-- **Firebase**: For authentication and real-time database functionalities.
-
-
-
 # TouristSpot
 
 TouristSpot is a dynamic platform for exploring and learning about famous tourist destinations. Users can browse through various countries, view images, read descriptions, and explore the rich culture and history associated with each destination. The platform offers a responsive design and user-friendly interface, making it ideal for travelers and travel enthusiasts.
@@ -66,7 +59,7 @@ TouristSpot is a dynamic platform for exploring and learning about famous touris
 
 1. Clone the client-side repository:
     ```bash
-    git clone https://github.com/your-username/touristspot-client.git
+    git clone https://github.com/israt83/tourismspots-client-side.git
     cd touristspot-client
     npm install
     ```
@@ -79,9 +72,9 @@ TouristSpot is a dynamic platform for exploring and learning about famous touris
     ```bash
     npm start
     ```
-4. Open your browser and navigate to:
+4. Open your browser and navigate to: https://github.com/israt83/tourism-spot-server.git
     ```
-    http://localhost:3000
+    http://localhost:port
     ```
 
 ---
@@ -90,7 +83,7 @@ TouristSpot is a dynamic platform for exploring and learning about famous touris
 
 1. Clone the server-side repository:
     ```bash
-    git clone https://github.com/your-username/touristspot-server.git
+    git clone 
     cd touristspot-server
     npm install
     ```
@@ -107,26 +100,6 @@ TouristSpot is a dynamic platform for exploring and learning about famous touris
     nodemon index.js
     ```
 
-4. Open your browser and navigate to the server's API endpoint (e.g., `http://localhost:000`).
+4. Open your browser and navigate to the server's API endpoint (e.g., `http://localhost:port`).
 
----
-
-## How to Contribute
-
-1. Fork the repository.
-2. Create a new branch:
-    ```bash
-    git checkout -b feature-name
-    ```
-3. Make your changes and commit them:
-    ```bash
-    git commit -m "Add a feature"
-    ```
-4. Push to your branch:
-    ```bash
-    git push origin feature-name
-    ```
-5. Open a pull request.
-
----
 
