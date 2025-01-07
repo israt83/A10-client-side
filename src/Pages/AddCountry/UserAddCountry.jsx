@@ -28,7 +28,7 @@ const UserAddCountry = () => {
 
 
     //    send data to the server
-    fetch('https://tourismweb-stores-server.onrender.com/country',{
+    fetch('http://localhost:3000/country',{
         method:'POST',
         headers:{
             'content-type' :'application/json'
@@ -59,7 +59,7 @@ const UserAddCountry = () => {
                     <h1 className="text-2xl lg:text-4xl font-bold text-center">Add your Country</h1>
                     <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                         <div className="col-span-full sm:col-span-3">
-                            <label htmlFor="image" className="text-sm">Image URL</label>
+                            <label htmlFor="image" className="text-sm bottom-2 ">Image URL</label>
                             <input id="image" name="image" type="text" placeholder="Image URL" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:border-gray-300 p-3" />
                         </div>
                         <div className="col-span-full sm:col-span-3">
@@ -109,6 +109,7 @@ const UserAddCountry = () => {
                     <div className="col-span-full">
                         <button value='ADD' type="submit" className="btn btn-block font-semibold rounded dark:bg-blue-950 dark:text-gray-100">ADD</button>
                     </div>
+                   
                 </form>
             </section>
         </div>
@@ -116,3 +117,5 @@ const UserAddCountry = () => {
 };
 
 export default UserAddCountry;
+
+

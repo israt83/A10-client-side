@@ -52,7 +52,7 @@ const UpdateList = () => {
     const handleUpdateSpot = (event) => {
         event.preventDefault();
 
-        fetch(`https://tourismweb-stores-server.onrender.com/userspot/${_id}`, {
+        fetch(`http://localhost:3000/userspot/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

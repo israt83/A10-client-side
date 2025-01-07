@@ -27,7 +27,7 @@ const MyList = ({ userSpot, userSpots, setUserSpots }) => {
           }).then((result) => {
             if (result.isConfirmed) {
          
-            fetch(`https://tourismweb-stores-server.onrender.com/userspot/${_id}`,{
+            fetch(`http://localhost:3000/userspot/${_id}`,{
             method:'DELETE',
            
            })
@@ -50,7 +50,7 @@ const MyList = ({ userSpot, userSpots, setUserSpots }) => {
     }
   
     return (
-    <div className=" rounded-md shadow-md  dark:bg-gray-50 dark:text-gray-800">
+    <div className="container mx-auto rounded-md shadow-md  dark:bg-gray-50 dark:text-gray-800">
 
 	<img src={image} alt="" className="object-cover object-center w-full h-72 dark:bg-gray-500 rounded-xl" />
 	<div className="p-3">

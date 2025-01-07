@@ -43,11 +43,15 @@ const Login = () => {
     return (
         <>
             <ToastContainer />
-            <div className="bg-base-200 pt-5 mt-40 w-full" data-aos="zoom-in">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">Login now!</h1>
+            <div className="grid lg:grid-cols-2 items-center justify-center pt-5 mt-20 w-full" data-aos="zoom-in">
+                <div>
+                    <img className='lg:mx-10' src="https://rsssc.org/assest/img/Login.jpg" alt="" />
+                </div>
+                <div>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mt-8 lg:mt-0">Login now!</h1>
                 <div className="min-h-screen flex justify-center items-center">
                     <div className="w-full max-w-lg px-4">
-                        <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
+                        <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100 pb-8">
                             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                                 <div className="form-control">
                                     <label className="label">
@@ -100,6 +104,7 @@ const Login = () => {
                             <SocialLogin />
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </>

@@ -28,7 +28,7 @@ const AddCountry = () => {
 
 
     //    send data to the server
-    fetch('https://tourismweb-stores-server.onrender.com/country',{
+    fetch('http://localhost:3000/country',{
         method:'POST',
         headers:{
             'content-type' :'application/json'

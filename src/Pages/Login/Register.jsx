@@ -55,10 +55,14 @@ const Register = () => {
 
     <>
     <ToastContainer />
-    <div className="bg-base-200 my-5 mt-40 w-full" data-aos="zoom-in">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center py-5">Register now!</h1>
-      <div className="min-h-screen flex justify-center items-center">
-        <div className="w-full lg:w-1/2 px-4">
+    <div className="grid lg:grid-cols-2 items-center justify-center my-5 mt-20 container px-4 lg:px-12" data-aos="zoom-in">
+      <div>
+        <img className="w-[500px] h-[500px]" src="https://t4.ftcdn.net/jpg/04/87/04/25/240_F_487042521_pkLsDfcJjoFDNAf1nZ4FPnbT4tNTTCoW.jpg" alt="" />
+      </div>
+     <div>
+     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center py-5">Register now!</h1>
+      <div className="min-h-screen ">
+        <div className="w-full ">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="card flex-shrink-0 w-full shadow-2xl bg-base-100"
@@ -140,6 +144,7 @@ const Register = () => {
           </form>
         </div>
       </div>
+     </div>
     </div>
     {toastMessage && (
       <div className="toast toast-success">

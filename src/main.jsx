@@ -26,9 +26,9 @@ import UpdateList from "./Pages/MyList/UpdateList";
 import CountrySpot from "./Pages/Countrys/CountrySpot";
 import CountrySpotCardDetails from "./Pages/Countrys/CountrySpotCardDetails";
 // const url = "/spotData.json";
-const spotUrl = "https://tourismweb-stores-server.onrender.com/spot";
-const countryUrl = "https://tourismweb-stores-server.onrender.com/country";
-const userspotUrl ='https://tourismweb-stores-server.onrender.com/userspot';
+const spotUrl = "http://localhost:3000/spot";
+const countryUrl = "http://localhost:3000/country";
+const userspotUrl ='http://localhost:3000/userspot';
 
 
 
@@ -84,27 +84,7 @@ const router = createBrowserRouter([
         }
       },
     
-      // {
-      //   path: "detail/:id",
-      //   element: <PrivateRoute><Details /></PrivateRoute>,
-      //   loader: async ({ params }) => {
-      //     try {
-      //       const response = await fetch(`${spotUrl}/${params.id}`);
-            
-      //       // Check if the response is ok (status in the range 200-299)
-      //       if (!response.ok) {
-      //         throw new Error(`Error fetching data: ${response.statusText}`);
-      //       }
-            
-      //       const data = await response.json();
-      //       return data;
-      //     } catch (error) {
-      //       console.error("Failed to load data:", error);
-      //       // Optionally, you can return a fallback value or handle the error differently
-      //       return { error: error.message };
-      //     }
-      //   }
-      // },
+     
 
   
      
@@ -160,7 +140,7 @@ const router = createBrowserRouter([
       {
         path:'updatelist/:id',
         element:<UpdateList></UpdateList>,
-        loader:({params}) =>fetch(`https://tourismweb-stores-server.onrender.com/userspot/${params.id}`)
+        loader:({params}) =>fetch(`http://localhost:3000/userspot/${params.id}`)
         
     
       },
@@ -168,7 +148,7 @@ const router = createBrowserRouter([
         path: "country/:id",
         element: <CountrySpot />,
         loader: async () => {
-            const response = await fetch('https://tourismweb-stores-server.onrender.com/countryspot');
+            const response = await fetch('http://localhost:3000/countryspot');
             const data = await response.json();
             return data;
         }
@@ -178,7 +158,7 @@ const router = createBrowserRouter([
       path: "detail/:id",
       element: <CountrySpotCardDetails />,
       loader: async ({ params }) => {
-      const response = await fetch('https://tourismweb-stores-server.onrender.com/countryspot'); 
+      const response = await fetch('http://localhost:3000/countryspot'); 
       if (!response.ok) {
       throw new Error('Failed to fetch data');
       }

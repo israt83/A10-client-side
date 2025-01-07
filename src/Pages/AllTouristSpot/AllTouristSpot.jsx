@@ -21,9 +21,9 @@ const AllTouristSpot = () => {
     setLoading(true);
     try {
       const [touristSpotRes, userSpotRes, touristCountrySpotRes] = await Promise.all([
-        fetch(`https://tourismweb-stores-server.onrender.com/spot?sort=${sortOrder}`),
-        fetch(`https://tourismweb-stores-server.onrender.com/userspot`),
-        fetch(`https://tourismweb-stores-server.onrender.com/countryspot?sort=${sortOrder}`),
+        fetch(`http://localhost:3000/spot?sort=${sortOrder}`),
+        fetch(`http://localhost:3000/userspot`),
+        fetch(`http://localhost:3000/countryspot?sort=${sortOrder}`),
       ]);
 
       const [touristSpotData, userSpotData, touristCountrySpotData] = await Promise.all([
@@ -64,13 +64,13 @@ const AllTouristSpot = () => {
         data-aos-easing="ease-out-cubic"
         data-aos-duration="1000"
       >
-        <h1 className="text-2xl lg:text-4xl font-bold my-4 lg:my-7">
+        <h1 className="text-2xl lg:text-4xl font-bold my-4 ">
           All Tourist Spots
         </h1>
 
         <select
           onChange={handleSortChange}
-          className="mt-4 p-2 border border-blue-900 rounded"
+          className="mt-4  p-2 border border-blue-900 rounded"
         >
           <option value="asc">Sort by Cost: Low to High</option>
           <option value="desc">Sort by Cost: High to Low</option>

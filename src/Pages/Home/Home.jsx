@@ -17,13 +17,14 @@ const Home = () => {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    fetch('https://tourismweb-stores-server.onrender.com/country')
+    fetch('http://localhost:3000/country')
       .then(res => res.json())
       .then(data => setCountries(data));
   }, []);
 
   return (
     <>
+  
       <Banner />
       <div className="py-14">
         <h2 className="text-4xl font-bold text-center text-blue-950" data-aos="fade-up" data-aos-duration="3000">
@@ -40,20 +41,17 @@ const Home = () => {
           <Card key={tourismSpot._id} tourismSpot={tourismSpot} />
         ))}
       </div>
-    
-      <h2 className="text-2xl font-bold text-center lg:text-left lg:ml-56 text-blue-950 uppercase mt-20">
-        Featured Tourist Spot Countries
-      </h2>
-        
-<div className="container mx-auto flex flex-wrap justify-center w-[900px]" data-aos="fade-up" data-aos-duration="3000">
-  {countries.slice(0, 6).map(country => (
-    <div className="w-full sm:w-1/2 lg:w-1/3 p-2" key={country._id}>
-      <div className="rounded">
-        <Countrys country={country} />
-      </div>
-    </div>
-  ))}
-</div>
+
+ <h2 className="text-2xl font-bold text-center lg:text-left lg:ml-40 text-blue-950 uppercase mt-20">
+                Featured Tourist Spot Countries
+            </h2>
+            <div className="container mx-auto lg:max-w-screen-lg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-6" data-aos="fade-up" data-aos-duration="3000">
+                {countries.slice(0, 6).map(country => (
+                    <div key={country._id}>
+                        <Countrys country={country} />
+                    </div>
+                ))}
+            </div>
 
 <FAQ></FAQ>
 

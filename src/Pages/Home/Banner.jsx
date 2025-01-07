@@ -1,12 +1,152 @@
 
 
 
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/swiper-bundle.css';
+// import 'swiper/css';
+// import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules'; // Import Autoplay
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+// import 'swiper/css/scrollbar';
+// import { Fade } from 'react-awesome-reveal';
+// import { Typewriter } from 'react-simple-typewriter';
 
-import React from 'react';
+// const Banner = () => {
+//     return (
+//         <Fade direction="" delay={100}>
+//             <div className="swiper-container pt-24" style={{ margin: '0 50px', zIndex: 10 }}>
+//                 <Swiper
+//                     modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} // Add Autoplay module
+//                     spaceBetween={50}
+//                     slidesPerView={1}
+//                     navigation
+//                     pagination={{ clickable: true }}
+//                     scrollbar={{ draggable: true }}
+//                     autoplay={{ delay: 3000, disableOnInteraction: false }} // Set autoplay delay and interaction behavior
+//                 >
+//                     <SwiperSlide>
+//                         <div style={{
+//                             backgroundImage: `url(https://img.freepik.com/premium-photo/tourism-day-suitcase-collages-design_23-2151721785.jpg?w=900)`,
+//                             backgroundRepeat: 'no-repeat',
+//                             backgroundSize: 'cover',
+//                             backgroundPosition: 'center',
+//                             borderRadius: '20px',
+//                             zIndex: 10
+//                         }} className="mx-auto lg:h-[600px]">
+//                             <h2 className='text-xl lg:text-6xl font-bold text-center lg:text-left py-48 lg:pl-40 text-blue-950'>
+//                                 <Typewriter
+//                                     words={['Get Out,', 'Get Active and', 'Explore....']}
+//                                     loop={false}
+//                                     cursor
+//                                     cursorStyle='|'
+//                                     typeSpeed={70}
+//                                     deleteSpeed={50}
+//                                     delaySpeed={1000}
+//                                 />
+//                             </h2>
+//                         </div>
+//                     </SwiperSlide>
+//                     <SwiperSlide>
+//                         <div style={{
+//                             backgroundImage: `url(https://img.freepik.com/premium-photo/woman-tourist-jumping-with-happy-it-has-reached-peak-mountain-see-beautiful-natural-landscape-sea-from-view-point-ko-wua-ta-lap-island-mu-ko-ang-thong-surat-thani-thailand_536080-999.jpg?w=900)`,
+//                             backgroundRepeat: 'no-repeat',
+//                             backgroundSize: 'cover',
+//                             backgroundPosition: 'center',
+//                             borderRadius: '20px',
+//                             zIndex: 10
+//                         }} className="h-[600px]">
+//                             <h2 className='text-xl lg:text-6xl font-bold text-center lg:text-left py-48 lg:pl-40 text-blue-950'>
+//                                 <Typewriter
+//                                     words={['Get Out,', 'Get Active and', 'Explore....']}
+//                                     loop={false}
+//                                     cursor
+//                                     cursorStyle='|'
+//                                     typeSpeed={70}
+//                                     deleteSpeed={50}
+//                                     delaySpeed={1000}
+//                                 />
+//                             </h2>
+//                         </div>
+//                     </SwiperSlide>
+//                     <SwiperSlide>
+//                         <div style={{
+//                             backgroundImage: `url(https://img.freepik.com/premium-photo/backpack-asian-man-mountain-see-view-panorama-beautiful-nature-landscape-sea-adventure-vacation-travel-leisure-asia-mu-ko-ang-thong-island-national-park-background-thailand_536080-1002.jpg?ga=GA1.1.1415714277.1717481765&semt=ais_hybrid)`,
+//                             backgroundRepeat: 'no-repeat',
+//                             backgroundSize: 'cover',
+//                             backgroundPosition: 'center',
+//                             borderRadius: '20px',
+//                             zIndex: 10
+//                         }} className="h-[600px]">
+//                             <h2 className='text-xl lg:text-6xl font-bold text-center lg:text-left py-48 lg:pl-40 text-blue-950'>
+//                                 <Typewriter
+//                                     words={['Get Out,', 'Get Active and', 'Explore....']}
+//                                     loop={false}
+//                                     cursor
+//                                     cursorStyle='|'
+//                                     typeSpeed={70}
+//                                     deleteSpeed={50}
+//                                     delaySpeed={1000}
+//                                 />
+//                             </h2>
+//                         </div>
+//                     </SwiperSlide>
+//                     <SwiperSlide>
+//                         <div style={{
+//                             backgroundImage: `url(https://ec.europa.eu/eurostat/documents/747990/17157919/Davide_Angelini_AdobeStock_437556662_RV.jpg/ecb23e13-0be4-354d-f4a8-25c0ff17d413?t=1689325477418)`,
+//                             backgroundRepeat: 'no-repeat',
+//                             backgroundSize: 'cover',
+//                             backgroundPosition: 'center',
+//                             borderRadius: '20px',
+//                             zIndex: 10
+//                         }} className="h-[600px]">
+//                             <h2 className='text-xl lg:text-6xl font-bold text-center lg:text-left py-48 lg:pl-40 text-blue-950'>
+//                                 <Typewriter
+//                                     words={['Get Out,', 'Get Active and', 'Explore....']}
+//                                     loop={false}
+//                                     cursor
+//                                     cursorStyle='|'
+//                                     typeSpeed={70}
+//                                     deleteSpeed={50}
+//                                     delaySpeed={1000}
+//                                 />
+//                             </h2>
+//                         </div>
+//                     </SwiperSlide>
+//                     <SwiperSlide>
+//                         <div style={{
+//                             backgroundImage: `url(https://img.freepik.com/premium-photo/tourist-taking-photo-sunrise-mountains-sea-city-la-ceiba-honduras_297446-685.jpg?w=900)`,
+//                             backgroundRepeat: 'no-repeat',
+//                             backgroundSize: 'cover',
+//                             backgroundPosition: 'center',
+//                             borderRadius: '20px',
+//                             zIndex: 10
+//                         }} className="h-[600px]">
+//                             <h2 className='text-xl lg:text-6xl font-bold text-center lg:text-left py-48 lg:pl-40 text-blue-950'>
+//                                 <Typewriter
+//                                     words={['Get Out,', 'Get Active and', 'Explore....']}
+//                                     loop={false}
+//                                     cursor
+//                                     cursorStyle='|'
+//                                     typeSpeed={70}
+//                                     deleteSpeed={50}
+//                                     delaySpeed={1000}
+//                                 />
+//                             </h2>
+//                         </div>
+//                     </SwiperSlide>
+//                 </Swiper>
+//             </div>
+//         </Fade>
+//     );
+// };
+
+// export default Banner;
+
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import 'swiper/css';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules'; // Import Autoplay
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
@@ -16,81 +156,58 @@ import { Typewriter } from 'react-simple-typewriter';
 const Banner = () => {
     return (
         <Fade direction="" delay={100}>
-            <div className="swiper-container pt-36" style={{ margin: '0 50px', zIndex: 10 }}>
+            <div className="swiper-container pt-24 px-4 md:px-8 lg:px-16 xl:px-10" style={{ zIndex: 10 }}>
                 <Swiper
-                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} // Add Autoplay module
                     spaceBetween={50}
                     slidesPerView={1}
                     navigation
                     pagination={{ clickable: true }}
                     scrollbar={{ draggable: true }}
+                    autoplay={{ delay: 3000, disableOnInteraction: false }} // Set autoplay delay and interaction behavior
                 >
-                    <SwiperSlide>
-                        <div style={{
-                            backgroundImage: `url(https://as1.ftcdn.net/v2/jpg/02/52/57/54/1000_F_252575412_fdLDrADIPJb70OatoOwkM2K3v6DMolOJ.jpg)`,
-                            backgroundRepeat: 'no-repeat',
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            borderRadius: '20px',
-                            zIndex: 10
-                        }} className="mx-auto lg:h-[600px]">
-                            <h2 className='text-xl lg:text-6xl font-bold text-center lg:text-left py-48 lg:pl-40 text-blue-950'>
-                                <Typewriter
-                                    words={['Get Out,', 'Get Active and', 'Explore....']}
-                                    loop={false}
-                                    cursor
-                                    cursorStyle='|'
-                                    typeSpeed={70}
-                                    deleteSpeed={50}
-                                    delaySpeed={1000}
-                                />
-                            </h2>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div style={{
-                            backgroundImage: `url(https://img.freepik.com/premium-photo/woman-tourist-jumping-with-happy-it-has-reached-peak-mountain-see-beautiful-natural-landscape-sea-from-view-point-ko-wua-ta-lap-island-mu-ko-ang-thong-surat-thani-thailand_536080-999.jpg?w=900)`,
-                            backgroundRepeat: 'no-repeat',
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            borderRadius: '20px',
-                            zIndex: 10
-                        }} className="h-[600px]">
-                            <h2 className='text-xl lg:text-6xl font-bold text-center lg:text-left py-48 lg:pl-40 text-blue-950'>
-                                <Typewriter
-                                    words={['Get Out,', 'Get Active and', 'Explore....']}
-                                    loop={false}
-                                    cursor
-                                    cursorStyle='|'
-                                    typeSpeed={70}
-                                    deleteSpeed={50}
-                                    delaySpeed={1000}
-                                />
-                            </h2>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div style={{
-                            backgroundImage: `url(https://img.freepik.com/premium-photo/tourist-taking-photo-sunrise-mountains-sea-city-la-ceiba-honduras_297446-685.jpg?w=900)`,
-                            backgroundRepeat: 'no-repeat',
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            borderRadius: '20px',
-                            zIndex: 10
-                        }} className="h-[600px]">
-                            <h2 className='text-xl lg:text-6xl font-bold text-center lg:text-left py-48 lg:pl-40 text-blue-950'>
-                                <Typewriter
-                                    words={['Get Out,', 'Get Active and', 'Explore....']}
-                                    loop={false}
-                                    cursor
-                                    cursorStyle='|'
-                                    typeSpeed={70}
-                                    deleteSpeed={50}
-                                    delaySpeed={1000}
-                                />
-                            </h2>
-                        </div>
-                    </SwiperSlide>
+                    {[
+                        {
+                            image: "https://img.freepik.com/premium-photo/tourism-day-suitcase-collages-design_23-2151721785.jpg?w=900",
+                        },
+                        {
+                            image: "https://img.freepik.com/premium-photo/woman-tourist-jumping-with-happy-it-has-reached-peak-mountain-see-beautiful-natural-landscape-sea-from-view-point-ko-wua-ta-lap-island-mu-ko-ang-thong-surat-thani-thailand_536080-999.jpg?w=900",
+                        },
+                        {
+                            image: "https://img.freepik.com/premium-photo/backpack-asian-man-mountain-see-view-panorama-beautiful-nature-landscape-sea-adventure-vacation-travel-leisure-asia-mu-ko-ang-thong-island-national-park-background-thailand_536080-1002.jpg?w=900",
+                        },
+                        {
+                            image: "https://ec.europa.eu/eurostat/documents/747990/17157919/Davide_Angelini_AdobeStock_437556662_RV.jpg/ecb23e13-0be4-354d-f4a8-25c0ff17d413?t=1689325477418",
+                        },
+                        {
+                            image: "https://img.freepik.com/premium-photo/tourist-taking-photo-sunrise-mountains-sea-city-la-ceiba-honduras_297446-685.jpg?w=900",
+                        },
+                    ].map((slide, index) => (
+                        <SwiperSlide key={index}>
+                            <div
+                                style={{
+                                    backgroundImage: `url(${slide.image})`,
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    borderRadius: '20px',
+                                }}
+                                className="mx-auto h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] flex items-center"
+                            >
+                                <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-center lg:text-left px-10 md:px-8 lg:px-16 mb-36 lg:mb-80 text-blue-950">
+                                    <Typewriter
+                                        words={['Get Out,', 'Get Active and', 'Explore....']}
+                                        loop={false}
+                                        cursor
+                                        cursorStyle="|"
+                                        typeSpeed={70}
+                                        deleteSpeed={50}
+                                        delaySpeed={1000}
+                                    />
+                                </h2>
+                            </div>
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
         </Fade>
