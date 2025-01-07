@@ -5,11 +5,11 @@ TouristSpot is a dynamic platform for exploring and learning about famous touris
 
 ## Live Site URL
 
-[TouristSpot Live Site](https://tourismspot-website.netlify.app)
+[TouristCenter Live Site](https://tourismspot-website.netlify.app)
 
 ## Server Repository
 
-[TouristSpot Server Repository](https://github.com/israt83/tourism-spot-server)
+[TouristCenter Server Repository](https://github.com/israt83/tourism-spot-server)
 
 
 
