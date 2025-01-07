@@ -28,7 +28,7 @@ const UserAddCountry = () => {
 
 
     //    send data to the server
-    fetch('http://localhost:3000/country',{
+    fetch('https://tourism-spot-server.vercel.app/country',{
         method:'POST',
         headers:{
             'content-type' :'application/json'

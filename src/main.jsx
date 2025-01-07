@@ -16,40 +16,25 @@ import Details from "./Pages/Details/Details";
 import UpdateProfile from "./Pages/Login/UpdateProfile";
 import AddTouristSpot from "./Pages/AddTouristSpot/AddTouristSpot";
 import AllTouristSpot from "./Pages/AllTouristSpot/AllTouristSpot";
-import MyListContainer from "./Pages/MyList/MyListContainer"; // Correct import
-// import CountrySpots from "./Pages/CountrySpots/CountrySpots";
-// import Countrys from "./Pages/Countrys/Countrys";
+import MyListContainer from "./Pages/MyList/MyListContainer"; 
+
 import AddCountry from "./Pages/AddCountry/AddCountry";
 import CountrySpots from "./Pages/Countrys/CountrySpots";
-// import UserAddCountry from "./Pages/AddCountry/UserAddCountry";
+
 import UpdateList from "./Pages/MyList/UpdateList";
 import CountrySpot from "./Pages/Countrys/CountrySpot";
 import CountrySpotCardDetails from "./Pages/Countrys/CountrySpotCardDetails";
-// const url = "/spotData.json";
-const spotUrl = "http://localhost:3000/spot";
-const countryUrl = "http://localhost:3000/country";
-const userspotUrl ='http://localhost:3000/userspot';
+
+const spotUrl = "https://tourism-spot-server.vercel.app/spot";
+const countryUrl = "https://tourism-spot-server.vercel.app/country";
+const userspotUrl ='https://tourism-spot-server.vercel.app/userspot';
 
 
 
 
 
 const router = createBrowserRouter([
-  // {
-  //   path: "/",
-  //   element: <Root />,
-  //   errorElement: <NotFound />,
-  //   children: [
-  //     {
-  //       path: "/",
-  //       element: <Home />,
-  //       // loader: () => fetch(spotUrl).then(response => response.json())
-  //       loader: async () => {
-  //         const response = await fetch(spotUrl);
-  //         const data = await response.json();
-  //         return data;
-  //     }
-  //     },
+
   {
     path: "/",
     element: <Root />,
@@ -68,7 +53,7 @@ const router = createBrowserRouter([
             return data;
           } catch (error) {
             console.error('Fetching error:', error);
-            throw error; // This will allow the errorElement to be shown
+            throw error; 
           }
         }
       },

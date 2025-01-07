@@ -51,11 +51,7 @@ const Card = ({ tourismSpot }) => {
         } 
 
       
-{/* {
-  description.length > 50
-    ? <p className="dark:text-gray-800 ">{description.slice(0, 100)} ...<br /><button className='btn btn-outline text-blue-900 w-full mt-3'><Link to={`/detail/${tourismSpot._id}`} className="text-gray-950 font-bold"><span className="text-blue-900">View Details</span></Link></button></p>
-    : <p className="dark:text-gray-800">{description}</p>
-} */}
+
     </div>
   );
 };

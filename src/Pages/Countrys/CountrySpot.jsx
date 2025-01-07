@@ -11,7 +11,7 @@ const CountrySpot = () => {
 
     useEffect(() => {
         // fetch('/spotData.json')
-        fetch('http://localhost:3000/countryspot')
+        fetch('https://tourism-spot-server.vercel.app/countryspot')
             .then(res => res.json())
             .then(data => setCountries(data.countries));
     }, []);

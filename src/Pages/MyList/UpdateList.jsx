@@ -52,7 +52,7 @@ const UpdateList = () => {
     const handleUpdateSpot = (event) => {
         event.preventDefault();
 
-        fetch(`http://localhost:3000/userspot/${_id}`, {
+        fetch(`https://tourism-spot-server.vercel.app/userspot/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

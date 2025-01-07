@@ -1,22 +1,47 @@
-#Travel Tourist
 
-## Live Site Links:
-[Travel Tourist](https://tourismspot-website.netlify.app/)
-
-- **Initial Commit**: Set up the project structure and installed necessary dependencies.
-- **Navbar Implementation**: Added a responsive navbar with active route highlighting and user authentication state management.
-- **Authentication**: Implemented email/password, Google, and GitHub login and registration functionality.
-- **Slider Integration**: Added a Swiper slider to the homepage banner.
-- **Destination Section**: Created API data for our best destination and displayed them in a responsive card format.
-- **Destination Details Page**: Developed a protected route for detailed destination information, accessible only to logged-in users.
-- **Footer Component**: Designed a comprehensive footer with relevant information and links.
-- **404 Page**: Added a custom 404 Not Found page for undefined routes.
-- **Profile Update Feature**: Enabled logged-in users to update their profile information securely.
-- **Environment Variables**: Configured Firebase keys using environment variables for enhanced security.
 
 ## NPM Packages Used
 
 - **Firebase**: For authentication and real-time database functionalities.
+
+
+
+# TouristSpot
+
+TouristSpot is a dynamic platform for exploring and learning about famous tourist destinations. Users can browse through various countries, view images, read descriptions, and explore the rich culture and history associated with each destination. The platform offers a responsive design and user-friendly interface, making it ideal for travelers and travel enthusiasts.
+
+## Live Site URL
+
+[TouristSpot Live Site](https://tourismspot-website.netlify.app)
+
+## Server Repository
+
+[TouristSpot Server Repository](https://github.com/israt83/tourism-spot-server)
+
+
+
+---
+
+
+
+## Key Features
+
+- **Browse Destinations:** Explore countries with images, descriptions, and key details.
+- **Responsive Design:** Optimized for all devices, including desktops, tablets, and mobile phones.
+- **Dynamic Content:** Backend-driven data fetching ensures up-to-date information.
+- **Theme Change:** Users can switch between light and dark themes for a personalized browsing experience.
+- **Authentication**: Implemented email/password, Google, and GitHub login and registration functionality.
+- **Profile Update Feature**: Enabled logged-in users to update their profile information securely.
+
+
+
+---
+
+## Technologies Used
+
+### **Frontend**
+- **React**: For building dynamic user interfaces.
+- **Tailwind CSS**: For responsive and modern styling.
 - **Swiper**: For implementing a responsive slider.
 - **AOS**: For scroll animations to enhance user experience.
 - **React Hook Form**: For managing form state and validation.
@@ -24,3 +49,84 @@
 - **react-awesome-reveal**: For adding simple and customizable reveal animations to components.
 - **react-simple-typewriter**: For adding typewriter effects to text elements.
 - **Tippy.js**: For adding tooltips to enhance user interactions.
+
+### **Backend**
+- **Express.js**: For building the server and handling API requests.
+- **MongoDB**: For storing country and tourist spot data.
+- **JWT**: For secure authentication.
+
+### **Authentication**
+- **Firebase**: For handling user authentication.
+
+---
+
+## Running the Project Locally
+
+### **Frontend**
+
+1. Clone the client-side repository:
+    ```bash
+    git clone https://github.com/your-username/touristspot-client.git
+    cd touristspot-client
+    npm install
+    ```
+
+2. Set up Firebase for authentication:
+   - Create a Firebase project in your Firebase Console.
+   - Add your Firebase configuration to the `firebase.config.js` file.
+
+3. Start the development server:
+    ```bash
+    npm start
+    ```
+4. Open your browser and navigate to:
+    ```
+    http://localhost:3000
+    ```
+
+---
+
+### **Backend**
+
+1. Clone the server-side repository:
+    ```bash
+    git clone https://github.com/your-username/touristspot-server.git
+    cd touristspot-server
+    npm install
+    ```
+
+2. Set up MongoDB:
+   - Use MongoDB Atlas or run a local instance.
+   - Add your MongoDB connection URI to the `index.js` file:
+     ```javascript
+     const uri = "YOUR_MONGODB_CONNECTION_URI";
+     ```
+
+3. Start the backend server:
+    ```bash
+    nodemon index.js
+    ```
+
+4. Open your browser and navigate to the server's API endpoint (e.g., `http://localhost:000`).
+
+---
+
+## How to Contribute
+
+1. Fork the repository.
+2. Create a new branch:
+    ```bash
+    git checkout -b feature-name
+    ```
+3. Make your changes and commit them:
+    ```bash
+    git commit -m "Add a feature"
+    ```
+4. Push to your branch:
+    ```bash
+    git push origin feature-name
+    ```
+5. Open a pull request.
+
+---
+
