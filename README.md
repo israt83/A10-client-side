@@ -1,5 +1,5 @@
 
-# TouristSpot
+# TouristCenter
 
 TouristSpot is a dynamic platform for exploring and learning about famous tourist destinations. Users can browse through various countries, view images, read descriptions, and explore the rich culture and history associated with each destination. The platform offers a responsive design and user-friendly interface, making it ideal for travelers and travel enthusiasts.
 
